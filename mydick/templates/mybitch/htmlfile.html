@@ -1,0 +1,19 @@
+{%load static%}
+{%extends "master.html"%}
+<link rel="stylesheet" href="{%static 'cssfile.css'%}">
+{%block title%}
+    bitch details followed down:
+{%endblock%}
+
+{%block content%}
+<h1>bitches</h1>
+<ul>
+{%for x in takeit%}
+    <li><a href= "details/{{x.id}}">{{x.bname}}</a></li>
+{%endfor%}
+    
+<li><a href="/main">lets back </a></li>
+
+</ul>
+    
+{%endblock%}

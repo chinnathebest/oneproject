@@ -1,0 +1,162 @@
+{%load static%}
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+	<title>website1</title>
+</head>
+<body>
+	<div class="vini1">
+		<div class="vini-box">
+			<div class="vini-1">
+				<img src="image/logo/logo.svg" alt="vijay" >
+		    	<a href="https://vineireland.com/"></a>
+		    </div>
+		    <div class="vini-2">
+		    	<a href="{%static 'https://vineireland.com/web-design-products/'%}"><span class="vini-2-1"> Website Design</span></a>
+		    	<a href="{%static 'https://vineireland.com/logo-design/'%}"><span class="vini-2-1"> Branding</span></a>
+		    	<a href="{%static 'https://vineireland.com/news-mullingar-business-online/'%}"><span class="vini-2-1"> News</span></a>
+		    	<a href="{%static 'https://vineireland.com/company-succeed-online/'%}"><span class="vini-2-1"> About</span></a>
+		    	<a href="{%static 'https://vineireland.com/quote/'%}"><span class="vini-2-1"> Quote</span></a>
+		    </div>
+		    <div class="vini-3">
+		    	<a href="{%static 'https://vineireland.com/cart/' %}"><span class="vini-3-button">€"0.00"</span></a>
+		    </div>
+		</div>
+	</div>
+	<div class="vini2">
+		<div class="vini2-1">
+			<h1 class="vini2-h1">Start<br> The<br> New Year<br> Right<br> Here</h1>
+	    </div>
+	    <div class="vini2-2">
+	    	<a href="{%static 'https://carrollsoftullamore.ie/' %}"><img src="{% static 'image/mullingar_chamber.png'%}" height="600" width="1000"></a>
+	    </div>
+	</div>
+	<div class="vini3">
+		<h1 class="vini3-h1">Our Websites include</h1>
+		<div class="vini3-box">
+			<a href=""><div class="vini3-box1">
+				<div class="box1-box">
+					<div class="box1-box1"><img src="{% static 'image/website/lock.png' %}" height="35" width="40" class="box-image"></div>
+					<div class="box1-box2"><h1 class="box-h1">Secure Certificate</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box2">
+				<div class="box2-box">
+					<div class="box2-box1"><img src="{% static 'image/website/mobile.png'%}" height="50" width="55" class="box-image"></div>
+					<div class="box2-box2"><h1 class="box-h1">Mobile Optimisation</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box3">
+				<div class="box3-box">
+					<div class="box3-box1"><img src="{% static 'image/website/atm.jpg' %}" height="50" width="55" class="box-image"></div>
+					<div class="box3-box2"><h1 class="box-h1">Secure Payments</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box4">
+				<div class="box4-box">
+					<div class="box4-box1"><img src="{% static 'image/website/map.png' %}" height="30" width="35" class="box-image"></div>
+					<div class="box4-box2"><h1 class="box4-h1">Google Maps</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box5">
+				<div class="box5-box">
+					<div class="box5-box1"><img src="{% static 'image/website/chart.png' %}" height="35" width="40" class="box-image"></div>
+					<div class="box5-box2"><h1 class="box-h1">Google Analytics</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box6">
+				<div class="box6-box">
+					<div class="box6-box1"><img src="{% static 'image/website/pen.jpg' %}" height="35" width="40" class="box-image"></div>
+					<div class="box6-box2"><h1 class="box-h1">Graphic Design</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box7">
+				<div class="box7-box">
+					<div class="box7-box1"><img src="{% static 'image/website/training.png' %}" height="45" width="50" class="box-image"></div>
+					<div class="box7-box2"><h1 class="box7-h1">Training</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box8">
+				<div class="box8-box">
+					<div class="box8-box1"><img src="{% static 'image/website/logo.png' %}" height="35" width="40" class="box-image"></div>
+					<div class="box8-box2"><h1 class="box8-h1">Easy Editor</h1></div>
+				</div>
+			</div></a>
+			<a href=""><div class="vini3-box9">
+				<div class="box9-box">
+					<div class="box9-box1"><img src="{% static 'image/website/rocket.png' %}" height="35" width="40" class="box-image"></div>
+					<div class="box9-box2"><h1 class="box9-h1">Fast Hosting</h1></div>
+				</div>
+			</div></a>
+		</div>
+	</div>
+	{% for x in datas1 %}
+	{%if x.id is 2%}
+	<div class="vini4">
+		<div class="vini4-header"><h1 class="vini4-h1">Some of our clients</h1></div>
+		<div class="vini4-box1">
+			<a href="https://vineireland.com/mullingar/"><img src="{% static 'image/mullingar.jpg' %}" class="vini4-image"></a>
+			<div class="vini4-11"><h3 class="vini4-h3">{{x.name}}</h3></div>
+		    <div class="vini4-12"><p class="vini4-p">{{x.discription}}</p></div>
+		    <div class="vini4-13"><h5 class="vini4-h5"><a href="https://vineireland.com/mullingar/" class="vini-a"> READ MORE »</a></h5></div>
+		</div>
+	</div>
+	{%endif%}
+	{%endfor%}
+	<div class="vini5">
+		<div class="vini5-box">
+			<div class="vini5-box1">
+				<a href="https://vineireland.com/"><img src="{% static 'image/end/tubular.svg' %}" class="vini5-image"></a>
+				<div class="vini5-11">
+					<a href="https://vineireland.com/quote/"><p class="vini5-p1">Get a quote</p></a>
+				</div>
+				<div class="vini5-12">
+					<a href="https://vineireland.com/product/pay-your-bill/"><p class="vini5-p">Make a payment</p></a>
+				</div>
+			</div>
+			<div class="vini5-box2">
+				<div class="vini5-13">
+					<h4 class="vini5-h4">CONTACT US</h4>
+				</div>
+				<ul class="vini5-ul">
+					<li class="vini5-li"><span class="vini5-span">Vine Marketing</span></li>
+					<li class="vini5-li"><span class="vini5-span">Phone: 044 930 5900</span></li>
+					<li class="vini5-li"><span class="vini5-span">Sales: sales@vineireland.com</span></li>
+					<li class="vini5-li"><span class="vini5-span">Support:</span></li>
+					<li class="vini5-li"><span class="vini5-span">support@vineireland.com</span></li>
+				</ul>
+			</div>
+			<div class="vini5-box3">
+				<div class="vini5-13">
+					<h4 class="vini5-h4">OPENING HOURS</h4>
+				</div>
+				<ul class="vini5-ul1">
+					<li class="vini5-lii"><span class="vini5-span">Monday - Friday:</span></li>
+					<li class="vini5-lii"><span class="vini5-span">9:00AM - 5:30PM</span></li>
+					<li class="vini5-lii"><span class="vini5-span">Saturday - Sunday</span></li>
+					<li class="vini5-lii"><span class="vini5-span">Closed</span></li>
+					<li class="vini5-lii"><span class="vini5-span">Public Holidays</span></li>
+					<li class="vini5-lii"><span class="vini5-span">Closed</span></li>
+				</ul>
+			</div>
+			<div class="vini5-box4">
+				<div class="vini5-15">
+					<h4 class="vini5-h4-1">SUPPORTING LOCAL</h4>
+				</div>
+				<div class="vini5-16">
+					<div class="vini5-16-1"><a href="https://mullingarchamber.ie/membership/"><img src="{% static 'image/end/mullingar-member.jpg' %}" height="90" width="225" class="vini5-16-image"></a></div>
+					<div class="vini5-16-1"><a href="https://mullingar.ie/"><img src="{% static 'image/end/test4.png' %}" height="90" width="225" class="vini5-16-image"></a></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="vini6">
+		<div class="vini6-box">
+			<div class="vini6-1"><h2 class="vini6-h2">Google logos are trademarks of Google LLC.</h2></div>
+			<div class="vini6-2"><h2 class="vini6-h2-h">The fb logo is a trademark of facebook</h2></div>
+			<div class="vini6-3"><h2 class="vini6-h2">© Vine Marketing 2021</h2></div>
+		</div>
+	</div>
+</body>
+</html

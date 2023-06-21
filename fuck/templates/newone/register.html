@@ -1,0 +1,17 @@
+<h1>sign up below</h1>
+
+<from method="POST" action="register">
+    {%csrf_token%}
+    <p>username:</p>
+    <input type="text" name="username"/>
+    {%for n in messages%}
+    {{n}}
+    {%endfor%}
+    <p>email:</p>
+    <input type="email" name="email"/>
+    <p>passward:</p>
+    <input type="password" name="password1"/>
+    <p>re-passward:</p>
+    <input type="password" name="password2"/>
+    <input type="submit"/>
+</from>
